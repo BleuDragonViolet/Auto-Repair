@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    padding: 20px 0;
+}
+
+.navbar button {
+    background-color: black;
+    border: 2px solid rgb(0, 74, 173);
+    color: rgb(0, 74, 173);
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar button:hover {
+    background-color: rgb(0, 74, 173);
+    color: black;
+}
+
+.navbar .logo {
+    width: 150px;
+}
+
+.table-container {
+    margin: 50px auto;
+    width: 80%;
+    max-width: 600px;
+}
+
+.tarif-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: black;
+}
+
+.tarif-table th, .tarif-table td {
+    border: 2px solid white;
+    padding: 15px;
+    text-align: center;
+    color: white;
+}
+
+.header-row {
+    background-color: rgb(0, 74, 173);
+    color: black;
+}
+
+.header-row th {
+    font-size: 24px;
+}
+
+.tarif-table tr td:first-child {
+    font-weight: bold;
+}
+
+.last-row td {
+    color: white;
+}
+
+.additional-info {
+    margin-top: 20px;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.additional-info p {
+    margin: 10px 0;
+    color: white;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.navbar .logo {
+    cursor: pointer;
+    transition: transform 0.1s linear, filter 0.1s ease;
+}
+
+.logo {
+    transform: rotate(0deg);
+    transition: transform 0.05s linear, filter 0.05s ease; /* Transition plus rapide */
+}
+
+.logo.blur {
+    filter: blur(5px); /* Applique un flou après une certaine vitesse */
+}
+
+/* Pour les écrans de téléphone */
+@media (max-width: 768px) {
+    /* Réorganiser la navbar pour les petits écrans */
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .navbar button {
+        font-size: 16px;
+        padding: 8px 15px;
+        margin: 5px 0; /* Ajoute un espace vertical entre les boutons */
+    }
+
+    .navbar .logo {
+        width: 120px; /* Réduit légèrement la taille du logo pour les téléphones */
+        margin: 10px 0;
+    }
+
+    .table-container {
+        width: 95%; /* Étend la table sur presque toute la largeur disponible */
+        margin: 20px auto;
+    }
+
+    .tarif-table th, .tarif-table td {
+        padding: 10px; /* Réduit légèrement le padding pour les petits écrans */
+        font-size: 14px; /* Diminue la taille du texte pour s'adapter aux petits écrans */
+    }
+
+    .header-row th {
+        font-size: 18px; /* Réduit la taille de la police du titre pour les petits écrans */
+    }
+
+    .additional-info {
+        padding: 0 15px; /* Réduit le padding pour éviter que le texte ne touche les bords */
+        font-size: 14px; /* Réduit légèrement la taille du texte */
+    }
+
+    /* Ajustement des marges inutiles */
+    br {
+        display: none; /* Supprime les sauts de ligne pour éviter de trop espacer le contenu */
+    }
+}
