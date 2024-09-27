@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    padding: 20px 0;
+}
+
+.navbar button {
+    background-color: black;
+    border: 2px solid rgb(0, 74, 173);
+    color:  rgb(0, 74, 173);;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar button:hover {
+    background-color: rgb(0, 74, 173);
+    color: black;
+}
+
+.navbar .logo {
+    width: 150px; /* Augmente la taille du logo */
+}
+
+.news {
+    margin: 50px auto;
+    width: 80%;
+    max-width: 600px;
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+h1 {
+    background-color: rgb(0, 74, 173);
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+a {
+    color: rgb(0, 74, 173);
+    text-decoration: underline;
+}
+
+a:hover {
+    color: rgb(0, 74, 173);
+}
+
+p {
+    padding: 15px;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.recrutement-btn {
+    background-color: rgb(0, 74, 173); /* Bleu similaire aux autres éléments */
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 25px; /* Bordures arrondies */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.recrutement-btn:hover {
+    background-color: rgb(0, 50, 120);
+    transform: scale(1.05);
+}
+
+/* Animation de pulsation */
+.recrutement-btn.pressed {
+    animation: pulse 3s ease-in-out forwards;
+}
+
+/* Définition de l'animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+        background-color: rgb(0, 50, 120);
+    }
+    100% {
+        transform: scale(1);
+        background-color: rgb(0, 74, 173);
+    }
+}
+
+.navbar .logo {
+    cursor: pointer;
+    transition: transform 0.1s linear, filter 0.1s ease;
+}
+
+.logo {
+    transform: rotate(0deg);
+    transition: transform 0.05s linear, filter 0.05s ease; /* Transition plus rapide */
+}
+
+.logo.blur {
+    filter: blur(5px); /* Applique un flou après une certaine vitesse */
+}
+
+.recrutement-btn {
+    background-color: rgb(0, 74, 173); /* Bleu similaire aux autres éléments */
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 25px; /* Bordures arrondies */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.recrutement-btn:hover {
+    background-color: rgb(0, 50, 120);
+    transform: scale(1.05);
+}
+
+/* Animation de pulsation */
+.recrutement-btn.pressed {
+    animation: pulse 3s ease-in-out forwards;
+}
+
+/* Définition de l'animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+        background-color: rgb(0, 50, 120);
+    }
+    100% {
+        transform: scale(1);
+        background-color: rgb(0, 74, 173);
+    }
+}
+
+/* Styles pour les écrans de téléphone */
+@media only screen and (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .navbar button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .logo {
+        width: 100px; /* Réduit la taille du logo */
+    }
+
+    .news {
+        width: 95%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .recrutement-btn {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+    }
+}
